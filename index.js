@@ -3,7 +3,7 @@ const {loadProfile} = require('./profiles.js');
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 // Database connection
 mongoose.connect("mongodb+srv://danielTingcoy:SEVFBufKqrhupSyw@zuitt-bootcamp.0c3cw.mongodb.net/real_time_search?retryWrites=true&w=majority", {
 	useNewUrlParser:true,
@@ -14,7 +14,7 @@ mongoose.connection.once("open", () => console.log("Now connected to the databas
 
 // Server setup
 const app = express();
-app.use(cors());
+app.use(cors(['http://localhost:3000', 'https://ancient-sierra-56628.herokuapp.com']));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
