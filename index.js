@@ -14,7 +14,7 @@ mongoose.connection.once("open", () => console.log("Now connected to the databas
 
 // Server setup
 const app = express();
-app.use(cors(['http://localhost:3000', 'https://ancient-sierra-56628.herokuapp.com']));
+app.use(cors(['http://localhost:3000', 'https://fast-reaches-27646.herokuapp.com']));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
